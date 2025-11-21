@@ -16,9 +16,9 @@ const HowSection = () => {
 
             <div className="card_holder py-5 grid grid-cols-2 md:grid-cols-4 gap-5">
                 {
-                    cardData.map(data =>
+                    cardData.map((data, index) =>
 
-                        <div className="card bg-base-100 rounded-2xl card-md shadow-sm">
+                        <div key={index} className="card bg-base-100 rounded-2xl card-md shadow-sm">
                             <div className="card-body">
                                 <BsTruck size={40} />
                                 <h2 className="card-title text-base text-secondary font-bold py-2"> {data.headline} </h2>
