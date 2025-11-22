@@ -6,7 +6,7 @@ const Navber = () => {
 
     const item = <>
                     <li><NavLink>Services</NavLink></li>
-                    <li><NavLink>Coverage</NavLink></li>
+                    <li><NavLink to='/coverage'>Coverage</NavLink></li>
                     <li><NavLink>Pricing</NavLink></li>
                 </>
 
@@ -23,9 +23,7 @@ const Navber = () => {
                         {item}
                     </ul>
                 </div>
-                <Link>
                     <Logo></Logo>
-                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

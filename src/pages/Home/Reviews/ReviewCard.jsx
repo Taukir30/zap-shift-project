@@ -14,12 +14,12 @@ const ReviewCard = ({review}) => {
                 </p>
                 <div className="divider divider-dashed my-4"></div>
                 <div className="flex items-center gap-4">
-                    <div className="avatar placeholder">
+                    <div className="avatar placeholder hidden sm:block">
                         <img src={review.user_photoURL} className='w-[50px] rounded-4xl' alt="" />
                     </div>
-                    <div>
-                        <h3 className="font-bold text-lg text-primary">{review.userName}</h3>
-                        <p className="text-gray-500 text-sm">{review.user_email}</p>
+                    <div className='w-full'>
+                        <h3 className="font-bold text-sm sm:text-lg text-primary">{review.userName}</h3>
+                        <p className="text-gray-500 overflow-hidden w-full text-sm">{review.user_email}</p>
                     </div>
                 </div>
             </div>

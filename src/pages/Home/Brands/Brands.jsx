@@ -14,7 +14,7 @@ const brandLogos = [amazonImg, casioImg, moonstarImg, randstadImg, starImg, star
 
 const Brands = () => {
     return (
-        <div>
+        <div className='my-5'>
             <div className='py-10'>
                 <h2 className='text-center text-2xl font-bold text-secondary'>We've helped thousands of sales teams</h2>
             </div>
