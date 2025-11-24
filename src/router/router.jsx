@@ -6,6 +6,8 @@ import Error from "../pages/Error/Error";
 import AuthLayout from "../layouts/AuthLayout/AuthLayout";
 import Login from "../pages/Auth/Login/Login";
 import Register from "../pages/Auth/Register/Register";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import BeARider from "../pages/BeARider/BeARider";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +24,12 @@ export const router = createBrowserRouter([
                 Component: Coverage,
                 loader: () => fetch('/service_centers.json').then( res => res.json()),
                 hydrateFallbackElement: <h2>Loading</h2>
+            },
+            {
+                path: 'rider',
+                element: <PrivateRoute>
+                            <BeARider></BeARider>
+                        </PrivateRoute>
             },
             {
                 path: '*',

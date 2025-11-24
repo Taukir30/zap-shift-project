@@ -12,7 +12,7 @@ const AuthLayout = () => {
                     <Outlet></Outlet>
                 </div>
             </div>
-            <div className='w-1/2 hidden md:flex bg-[#FAFDF0] h-screen items-center justify-center'>
+            <div className='w-1/2 hidden md:flex bg-[#FAFDF0] h-[700px] items-center justify-center'>
                 <img src={authImg} className='h-[300px]' alt="" />
             </div>
         </div>

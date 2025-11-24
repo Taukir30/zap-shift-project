@@ -50,7 +50,7 @@ const Navber = () => {
                         <button onClick={handleLogout} className='btn btn-outline'>Log out</button> :
                         <Link to='/login' className="btn btn-outline">Login</Link>
                     }
-                    <Link to='/bearider' className="btn btn-primary text-secondary rounded-md">Be a rider</Link>
+                    <Link to='/rider' className="btn btn-primary text-secondary rounded-md">Be a rider</Link>
                 </div>
             </div>
         </div>
