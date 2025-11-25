@@ -21,6 +21,7 @@ const Navber = () => {
         <li><NavLink to='/servises'>Services</NavLink></li>
         <li><NavLink to='/coverage'>Coverage</NavLink></li>
         <li><NavLink to='/pricing'>Pricing</NavLink></li>
+        <li><NavLink to='/send-parcel'>Send Parcel</NavLink></li>
     </>
 
     return (

@@ -8,6 +8,8 @@ import Login from "../pages/Auth/Login/Login";
 import Register from "../pages/Auth/Register/Register";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import BeARider from "../pages/BeARider/BeARider";
+import SendParcel from "../pages/SendParcel/SendParcel";
+import Loading from "../components/Loading/Loading";
 
 export const router = createBrowserRouter([
     {
@@ -23,13 +25,21 @@ export const router = createBrowserRouter([
                 path: 'coverage',
                 Component: Coverage,
                 loader: () => fetch('/service_centers.json').then( res => res.json()),
-                hydrateFallbackElement: <h2>Loading</h2>
+                hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: 'rider',
                 element: <PrivateRoute>
                             <BeARider></BeARider>
                         </PrivateRoute>
+            },
+            {
+                path: 'send-parcel',
+                element: <PrivateRoute>
+                            <SendParcel></SendParcel>
+                        </PrivateRoute>,
+                loader: () => fetch('/service_centers.json').then( res => res.json()),
+                hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: '*',
